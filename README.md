@@ -1,6 +1,6 @@
 # gym_memo
 
-A new Flutter project.
+My very first project.
 
 ## Getting Started
 
