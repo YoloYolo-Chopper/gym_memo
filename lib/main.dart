@@ -1,7 +1,42 @@
 import 'package:flutter/material.dart';
-import 'package:gym_memo/screens/add_screen.dart';
+import 'package:go_router/go_router.dart';
+import 'package:gym_memo/screens/day_record_screen.dart';
+import 'package:provider/provider.dart';
+
 import 'package:gym_memo/screens/home_screen.dart';
+import 'package:gym_memo/screens/variation_screen.dart';
+import 'package:gym_memo/screens/record_screen.dart';
+import 'package:gym_memo/screens/shop_screen.dart';
 import 'package:gym_memo/screens/training_screen.dart';
+
+import 'package:gym_memo/components/bottom_nav_bar.dart';
+
+final _router = GoRouter(
+  routes: [
+    ShellRoute(
+      builder: (context, state, child) {
+        return BottomNavBar(child: child);
+      },
+      routes: [
+        GoRoute(path: '/', builder: (context, state) => HomeScreen()),
+        GoRoute(path: '/day', builder: (context, state) => DayRecordScreen()),
+        GoRoute(path: '/record', builder: (context, state) => RecordScreen()),
+        GoRoute(path: '/shop', builder: (context, state) => ShopScreen()),
+        GoRoute(
+          path: '/training/:variationName',
+          builder: (context, state) {
+            final String variationName = state.pathParameters['variationName']!;
+            return TrainingScreen(variationName: variationName);
+          },
+        ),
+        GoRoute(
+          path: '/variation',
+          builder: (context, state) => VariationScreen(),
+        ),
+      ],
+    ),
+  ],
+);
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +48,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: _router,
       theme: ThemeData(
         useMaterial3: false,
         colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFFfeb854)),
@@ -26,14 +62,6 @@ class MyApp extends StatelessWidget {
         ),
       ),
       title: 'Flutter Demo',
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const Home(),
-        '/add': (context) => const AddScreen(),
-        '/training': (context) => const TrainingScreen(),
-
-      },
-
     );
   }
 }

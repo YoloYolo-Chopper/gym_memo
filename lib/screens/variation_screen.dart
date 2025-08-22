@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:gym_memo/components/bottom_nav_bar.dart';
+import 'package:go_router/go_router.dart';
 
-class AddScreen extends StatefulWidget {
-  const AddScreen({super.key});
+class VariationScreen extends StatefulWidget {
+  const VariationScreen({super.key});
+
 
   @override
-  State<AddScreen> createState() => _AddScreenState();
+  State<VariationScreen> createState() => _VariationScreenState();
 }
 
-class _AddScreenState extends State<AddScreen> {
-  List<String> workout = [
+class _VariationScreenState extends State<VariationScreen> {
+  final List<String> workout = const [
     'ミリタリープレス',
     'ショルダープレス',
     'アーノルドプレス',
@@ -21,51 +22,55 @@ class _AddScreenState extends State<AddScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('2025/08/15'),
-        backgroundColor: Color(0xFFfeb854),
+        title: const Text('2025/08/15'),
+        backgroundColor: const Color(0xFFfeb854),
         elevation: 0,
       ),
       body: SafeArea(
         child: Column(
           children: [
             Card(
-              margin: EdgeInsets.all(10),
+              margin: const EdgeInsets.all(10),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
+              clipBehavior: Clip.antiAlias, // <- header corners look right
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
                     width: double.infinity,
-                    padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-                    decoration: BoxDecoration(
+                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                    decoration: const BoxDecoration(
                       color: Color(0xFFfeb854),
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(12),
                         topRight: Radius.circular(12),
                       ),
                     ),
-                    child: Text(
+                    child: const Text(
                       '背中',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        // backgroundColor: Color(0xFFfeb854),
                       ),
                     ),
                   ),
                   ListView(
+                    padding: EdgeInsets.zero, // <- removes default insets
                     shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     children: ListTile.divideTiles(
                       context: context,
                       tiles: workout.map(
-                        (i) => ListTile(title: Text(i), onTap: () {
-                          print('$i got tapped!');
-                          Navigator.pushNamed(context, '/training');
-                        }),
+                            (i) => ListTile(
+                          title: Text(i),
+                          onTap: () {
+                            // navigate to training
+                            context.go('/training/$i');
+                          },
+                        ),
                       ),
                     ).toList(),
                   ),
@@ -75,20 +80,18 @@ class _AddScreenState extends State<AddScreen> {
           ],
         ),
       ),
-
       floatingActionButton: SizedBox(
         height: 60,
         width: 60,
         child: FloatingActionButton(
-          child: Icon(Icons.add, color: Colors.white, size: 30, weight: 700),
-          backgroundColor: Color(0xFFfeb854),
+          backgroundColor: const Color(0xFFfeb854),
           elevation: 0,
           onPressed: () {
-            print('test');
+            // add new item etc.
           },
+          child: const Icon(Icons.add, color: Colors.white, size: 30, weight: 700),
         ),
       ),
-      bottomNavigationBar: BottomNavBar(),
     );
   }
 }
