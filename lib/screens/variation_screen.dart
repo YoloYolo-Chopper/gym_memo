@@ -22,7 +22,8 @@ class _VariationScreenState extends State<VariationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('2025/08/15'),
+        title: const Text('Select Variation'),
+        centerTitle: true,
         backgroundColor: const Color(0xFFfeb854),
         elevation: 0,
       ),

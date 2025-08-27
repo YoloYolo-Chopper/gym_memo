@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:gym_memo/screens/day_record_screen.dart';
-import 'package:provider/provider.dart';
 
 import 'package:gym_memo/screens/home_screen.dart';
 import 'package:gym_memo/screens/variation_screen.dart';
@@ -19,14 +18,15 @@ final _router = GoRouter(
       },
       routes: [
         GoRoute(path: '/', builder: (context, state) => HomeScreen()),
-        GoRoute(path: '/day', builder: (context, state) => DayRecordScreen()),
+        GoRoute(path: '/day_record', builder: (context, state) => DayRecordScreen()),
         GoRoute(path: '/record', builder: (context, state) => RecordScreen()),
         GoRoute(path: '/shop', builder: (context, state) => ShopScreen()),
         GoRoute(
-          path: '/training/:variationName',
+          path: '/training/:variation',
+          name: 'training',
           builder: (context, state) {
-            final String variationName = state.pathParameters['variationName']!;
-            return TrainingScreen(variationName: variationName);
+            final String variation = state.pathParameters['variation']!;
+            return TrainingScreen(exercise: 'chest', variation: variation);
           },
         ),
         GoRoute(

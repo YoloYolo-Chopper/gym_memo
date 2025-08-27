@@ -1,0 +1,74 @@
+Muscle Group,Exercise,Variation
+Chest,Bench Press,Barbell Bench Press
+Chest,Bench Press,Dumbbell Bench Press
+Chest,Bench Press,Incline Bench Press (barbell/dumbbell)
+Chest,Bench Press,Decline Bench Press
+Chest,Bench Press,Close-Grip Bench Press
+Chest,Bench Press,Floor Press
+Chest,Push-Up,Standard Push-Ups
+Chest,Push-Up,Weighted Push-Ups
+Chest,Push-Up,Incline/Decline Push-Ups
+Chest,Push-Up,Ring/Deficit Push-Ups
+Chest,Fly,Dumbbell Fly (flat/incline/decline)
+Chest,Fly,Cable Crossover
+Chest,Fly,Pec Deck Machine
+Back,Pull-Ups/Chin-Ups,Pull-Ups (pronated)
+Back,Pull-Ups/Chin-Ups,Chin-Ups (supinated)
+Back,Pull-Ups/Chin-Ups,Neutral Grip Pull-Ups
+Back,Pull-Ups/Chin-Ups,Weighted Pull-Ups
+Back,Rows,Barbell Bent-Over Rows
+Back,Rows,Dumbbell Rows
+Back,Rows,Seal Rows
+Back,Rows,Inverted Rows
+Back,Rows,T-Bar Rows
+Back,Rows,Machine Rows
+Back,Pulldowns,Lat Pulldown (wide grip)
+Back,Pulldowns,Close-Grip Pulldown
+Back,Pulldowns,Neutral-Grip Pulldown
+Back,Deadlifts,Conventional Deadlift
+Back,Deadlifts,Romanian Deadlift
+Back,Deadlifts,Deficit Deadlift
+Back,Deadlifts,Rack Pull
+Legs,Squats,Back Squat (high-bar/low-bar)
+Legs,Squats,Front Squat
+Legs,Squats,Safety Bar Squat
+Legs,Squats,Box Squat
+Legs,Squats,Zercher Squat
+Legs,Squats,Goblet Squat
+Legs,Lunges & Splits,Forward Lunge
+Legs,Lunges & Splits,Reverse Lunge
+Legs,Lunges & Splits,Bulgarian Split Squat
+Legs,Lunges & Splits,Walking Lunges
+Legs,Lunges & Splits,Curtsey Lunge
+Legs,Hip Hinge,Deadlifts (sumo/conventional)
+Legs,Hip Hinge,Romanian Deadlift
+Legs,Hip Hinge,Good Mornings
+Legs,Hip Hinge,Hip Thrusts / Glute Bridges
+Legs,Leg Extensions & Curls,Machine Leg Extension
+Legs,Leg Extensions & Curls,Machine Leg Curl (seated/lying/standing)
+Shoulders,Presses,Overhead (Military) Press (barbell/dumbbell)
+Shoulders,Presses,Arnold Press
+Shoulders,Presses,Push Press
+Shoulders,Presses,Seated vs. Standing Press
+Shoulders,Raises,Lateral Raise (dumbbell/cable)
+Shoulders,Raises,Front Raise
+Shoulders,Raises,Rear Delt Raise (dumbbell/cable/reverse pec deck)
+Shoulders,Other,Upright Rows
+Shoulders,Other,Face Pulls
+Arms,Biceps,Barbell Curl
+Arms,Biceps,Dumbbell Curl (supinated/hammer/reverse)
+Arms,Biceps,Preacher Curl
+Arms,Biceps,Incline Dumbbell Curl
+Arms,Biceps,Cable Curl
+Arms,Triceps,Close-Grip Bench Press
+Arms,Triceps,Dips (bodyweight/weighted)
+Arms,Triceps,Overhead Triceps Extension (dumbbell/cable/rope)
+Arms,Triceps,Skull Crushers (EZ bar/dumbbell)
+Arms,Triceps,Pushdowns (rope/bar)
+Core,Anti-Movement,Plank / Side Plank
+Core,Anti-Movement,Pallof Press
+Core,Anti-Movement,Dead Bug
+Core,Flexion/Rotation,Crunch / Sit-Up
+Core,Flexion/Rotation,Hanging Leg Raise
+Core,Flexion/Rotation,Ab Wheel Rollout
+Core,Flexion/Rotation,Cable Woodchopper / Russian Twist

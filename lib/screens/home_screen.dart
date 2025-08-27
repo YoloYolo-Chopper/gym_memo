@@ -36,7 +36,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  context.go('/day');
+                  context.go('/day_record');
                 },
                 icon: Icon(Icons.add_circle, size: 40),
                 label: Text('本日のトレーニングを追加', style: TextStyle(
